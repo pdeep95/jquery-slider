@@ -1,0 +1,94 @@
+.circular-slider{
+	position: relative;
+	background: rgba(0,0,0,0.6);
+	min-height: 500px;
+}
+.slider-item>img{
+	width: 170px;
+	height: 160px;
+	display: inline-block;
+}
+.slider-item{
+	position: absolute;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+.slider-item h2{
+	position: absolute;
+	bottom: 0px;
+	margin: 0px;
+	color: white;
+	font-family: "GalanoGrotesque Black";
+	font-size: 20px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+[data-index]{
+	display: none;
+	/*margin-left: -85px;*/
+}
+[data-index="-2"]{
+	display: block;
+	left: 30%;
+	top: 100px;
+	z-index: 75;
+	margin-left: -60px;
+}
+[data-index="-1"]{
+	display: block;
+	left: 37%;
+	top: 135px;
+	opacity: 1;
+	z-index: 76;
+	margin-left: -75px;
+}
+[data-index="-1"] img, [data-index="1"] img{
+	height: 150px;
+	width: 150px;
+}
+[data-index="-2"] img, [data-index="2"] img{
+	height: 120px;
+	width: 120px;
+}
+[data-index="0"]{
+	display: block;
+	left: 50%;
+	top: 150px;
+	opacity: 1;
+	z-index: 77;
+	margin-left: -85px;
+}
+[data-index="1"]{
+	display: block;
+	left: 63%;
+	top: 135px;
+	z-index: 76;
+	margin-left: -75px;
+}
+[data-index="2"]{
+	display: block;
+	left: 70%;
+	top: 100px;
+	z-index: 75;
+	margin-left: -60px;
+}
+.only-four [data-index="2"], .only-four [data-index="-2"]{
+	left: 50%;
+	opacity: 0.6;
+}
+.circular-slider-prev{
+	position: absolute;
+	left: 19%;
+	top: 130px;
+	cursor: pointer;
+}
+.circular-slider-next{
+	position: absolute;
+	top: 130px;
+	left: 76%;
+	cursor: pointer;
+}
+.circular-slider-next img, .circular-slider-prev img{
+	width: 45px;
+	cursor: pointer;
+}
